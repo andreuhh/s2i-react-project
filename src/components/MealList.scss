@@ -1,0 +1,23 @@
+.nutrients ul {
+    display: flex;
+    width: 50rem;
+    justify-content: space-between;
+}
+
+.meals {
+    display: flex;
+}
+
+@media only screen and (max-width: 1024px) {
+    .meals {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nutrients ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}

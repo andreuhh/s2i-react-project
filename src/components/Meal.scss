@@ -1,0 +1,32 @@
+article {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+    max-width: 300px;
+    //box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+    width: 300px;
+    border-radius: 20px;
+    text-align: left;
+    cursor: pointer;
+
+    h1 {
+        text-align: left;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .cover {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .info {
+        padding-top: 1rem;
+    }
+
+    span {
+        padding-right: 5px;
+    }
+}
