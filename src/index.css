@@ -9,9 +9,10 @@ body {
 }
 
 .App {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  /* display: flex;
+  align-items: center; 
+  flex-direction: column; */
+  margin: 2rem;
 }
 
 section {
@@ -28,6 +29,7 @@ input {
   text-align: center;
   padding: 0.5rem;
   margin-bottom: 1rem;
+  width: fit-content;
 }
 
 button {
@@ -47,18 +49,11 @@ button:hover {
   cursor: pointer;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 h1 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2rem;
+  color: #30716F;
 }
-
-
 
 img {
   width: 100%;

@@ -1,11 +1,14 @@
 .nutrients ul {
     display: flex;
-    width: 50rem;
+    width: 100%;
     justify-content: space-between;
 }
 
 .meals {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    //width: 100%;
+    align-self: center;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -18,6 +21,5 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
     }
 }

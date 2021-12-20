@@ -1,0 +1,7 @@
+section.contResults {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: bisque;
+    //width: 100%;
+    align-self: center;
+}
