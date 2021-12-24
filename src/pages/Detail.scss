@@ -1,16 +1,40 @@
 .detail {
-
     &__hero {
-        width: 100%;
+        width: 60%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        margin: 0 auto;
     }
 
     p,
     ol,
     ul {
         text-align: left;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        li {
+            padding: 3px 5px;
+            border-radius: 5px;
+            background-color: #E6E8DE;
+
+            span {
+                color: #30716F;
+            }
+        }
+
+        li:not(:first-child) {
+            margin-left: 20px;
+        }
+
+        svg {
+            margin-right: 5px;
+        }
     }
 
     li {

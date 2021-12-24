@@ -7,7 +7,7 @@ export default function MainResults({ mainResults }) {
 
     return (
         <main>
-            <h2>Results</h2>
+            <h2>Search by name</h2>
             <section className='contResults'>
                 {mainResults.map((res) => {
                     return (
