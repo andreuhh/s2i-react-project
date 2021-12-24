@@ -1,5 +1,5 @@
 .banner {
-    background-color: #E6E8DE !important;
+    background-color: #E6E8DE;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -23,7 +23,6 @@
     }
 
     &__img {
-        background-color: brown;
         background-image: url(../assets/banner.jpg);
         background-position: center;
         background-repeat: no-repeat;

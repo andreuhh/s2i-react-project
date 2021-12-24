@@ -3,6 +3,7 @@ import { useFetch } from '../hooks/useFetch'
 import MealList from '../components/MealList';
 import MainResults from '../components/MainResults';
 import Banner from '../components/Banner';
+import SearchForm from '../components/SearchForm';
 import './Home.scss'
 
 export default function Home() {
@@ -30,22 +31,21 @@ export default function Home() {
             })
     }
 
-    function handleSearch(e) {
-        setTerm(e.target.value)
-    }
+    // function handleSearch(e) {
+    //     setTerm(e.target.value)
+    // }
 
     // key1 = acaba579520543978d3f9d612722d9a6
     // key2 = c08540dcb8804eb08e35916054acf82e
 
     const { data, isPending, error } = useFetch(`https://api.spoonacular.com/recipes/search?apiKey=c08540dcb8804eb08e35916054acf82e&number=4&diet=vegetarian&query=${term}`)
-    console.log(data);
+    //console.log(data);
 
     return (
         <div className="App">
             <h2 className='logo'>The gipsy spinach</h2>
             <Banner />
-
-            <input placeholder="Search by name" onChange={handleSearch} />
+            <SearchForm searchText={(text) => setTerm(text)} />
 
             {error && <p className="error">{error}</p>}
             {isPending && <p className="loading">Loading...</p>}
