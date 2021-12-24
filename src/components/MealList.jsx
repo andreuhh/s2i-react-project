@@ -10,12 +10,12 @@ export default function MealList({ mealData }) {
         <div>
             {mealData.nutrients &&
                 <section className='nutrients'>
-                    <h1>Macros</h1>
+                    <h2>Macros</h2>
                     <ul>
-                        <li>Calories: {nutrients.calories.toFixed(0)}</li>
-                        <li>Carbo: {nutrients.carbohydrates.toFixed(0)}</li>
-                        <li>Fat: {nutrients.fat.toFixed(0)}</li>
-                        <li>Protein: {nutrients.protein.toFixed(0)}</li>
+                        <li>Calories : <span>{nutrients.calories.toFixed(0)} g</span></li>
+                        <li>Carbo : <span>{nutrients.carbohydrates.toFixed(0)} g</span></li>
+                        <li>Fat :  <span>{nutrients.fat.toFixed(0)} g</span></li>
+                        <li>Protein : <span>{nutrients.protein.toFixed(0)} g</span></li>
                     </ul>
                 </section>
             }

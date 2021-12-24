@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useFetch } from '../hooks/useFetch'
 import MealList from '../components/MealList';
 import MainResults from '../components/MainResults';
+import Banner from '../components/Banner';
 import './Home.scss'
 
 export default function Home() {
@@ -41,7 +42,8 @@ export default function Home() {
 
     return (
         <div className="App">
-            <h1>Recipe app</h1>
+            <h2 className='logo'>The gipsy spinach</h2>
+            <Banner />
 
             <input placeholder="Search by name" onChange={handleSearch} />
 
@@ -51,10 +53,9 @@ export default function Home() {
             {data?.results && data?.results?.length > 0 && <MainResults mainResults={data?.results} />}
             {data?.results && data?.results?.length === 0 && <div>Nessun risultato per questa ricerca</div>}
 
-
             { /* SEARCH BY DAILY CALORIES */}
-            <input type="number" placeholder="Calories (e.g 2000)" onChange={handleChange} />
-            <button onClick={getMealData}>Get daily meal</button>
+            <input type="number" placeholder="Search by Calories (e.g 2000)" onChange={handleChange} />
+            <button onClick={getMealData}>Search</button>
             {mealData && <MealList mealData={mealData} />}
         </div>
     );
