@@ -5,6 +5,7 @@ import MainResults from '../components/MainResults';
 import Banner from '../components/Banner';
 import SearchForm from '../components/SearchForm';
 import './Home.scss'
+import Navbar from '../components/Navbar/Navbar';
 
 export default function Home() {
     const [mealData, setMealData] = useState(null);
@@ -19,7 +20,7 @@ export default function Home() {
 
     function getMealData() {
         fetch(
-            `https://api.spoonacular.com/mealplanner/generate?apiKey=c08540dcb8804eb08e35916054acf82e&timeFrame=day&diet=vegetarian&targetCalories=${calories}`
+            `https://api.spoonacular.com/mealplanner/generate?apiKey=acaba579520543978d3f9d612722d9a6&timeFrame=day&diet=vegetarian&targetCalories=${calories}`
         )
             .then((response) => response.json())
             .then((data) => {
@@ -38,12 +39,12 @@ export default function Home() {
     // key1 = acaba579520543978d3f9d612722d9a6
     // key2 = c08540dcb8804eb08e35916054acf82e
 
-    const { data, isPending, error } = useFetch(`https://api.spoonacular.com/recipes/search?apiKey=c08540dcb8804eb08e35916054acf82e&number=4&diet=vegetarian&query=${term}`)
+    const { data, isPending, error } = useFetch(`https://api.spoonacular.com/recipes/search?apiKey=acaba579520543978d3f9d612722d9a6&number=4&diet=vegetarian&query=${term}`)
     //console.log(data);
 
     return (
         <div className="App">
-            <h2 className='logo'>The gipsy spinach</h2>
+            <Navbar />
             <Banner />
             <SearchForm searchText={(text) => setTerm(text)} />
 
