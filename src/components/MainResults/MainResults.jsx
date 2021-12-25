@@ -1,5 +1,5 @@
 import React from 'react'
-import Meal from '../components/Meal'
+import Meal from '../Meal/Meal'
 
 import './MainResults.scss'
 

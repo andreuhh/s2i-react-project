@@ -72,22 +72,25 @@ button:hover {
 }
 
 h1,
-h2 {
+h2,
+h3.logo {
   margin-bottom: 1rem;
 }
 
-h2.logo {
+h3.logo {
   color: #2F2525;
   text-align: center;
 }
 
 h2,
 h3 {
-  text-align: left;
+  text-align: center;
   color: #30716F;
 }
 
-
+h2 {
+  font-size: 28px;
+}
 
 img {
   width: 100%;
@@ -113,9 +116,4 @@ a {
     margin: 10px;
   }
 
-  h1,
-  h2,
-  h3 {
-    text-align: center !important;
-  }
 }

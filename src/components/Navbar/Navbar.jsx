@@ -4,7 +4,7 @@ export default function Navbar() {
     return (
         <nav >
             <NavLink to="/">
-                <h2 className='logo'>The Gipsy Spinach</h2>
+                <h3 className='logo'>The Gipsy Spinach</h3>
             </NavLink>
         </nav>
     )

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useFetch } from '../hooks/useFetch'
-import MealList from '../components/MealList';
-import MainResults from '../components/MainResults';
-import Banner from '../components/Banner';
-import SearchForm from '../components/SearchForm';
+import MealList from '../components/MealList/MealList';
+import MainResults from '../components/MainResults/MainResults';
+import Banner from '../components/Banner/Banner';
+import SearchForm from '../components/SearchForm/SearchForm';
 import './Home.scss'
 import Navbar from '../components/Navbar/Navbar';
 

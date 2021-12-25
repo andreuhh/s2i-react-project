@@ -33,11 +33,11 @@ export default function Detail() {
                     {recipe.pricePerServing && <li><span><FaDollarSign /></span>{recipe.pricePerServing / 100}</li>}
                 </ul>
 
-                <h3>Summary</h3>
+                <h4>Summary</h4>
                 <p dangerouslySetInnerHTML={{ __html: recipe.summary }}></p>
 
                 {recipe.analyzedInstructions && <div>
-                    <h3>Instructions</h3>
+                    <h4>Instructions</h4>
                     <ul>
                         {recipe.analyzedInstructions[0].steps.map((step) => {
                             return (

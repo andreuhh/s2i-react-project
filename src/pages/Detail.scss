@@ -17,8 +17,18 @@
 
     p,
     ol,
-    ul {
+    ul,
+    h4 {
         text-align: left;
+    }
+
+    h4 {
+        font-size: 21px;
+    }
+
+    h4,
+    span {
+        color: #30716F;
     }
 
     p {
@@ -34,10 +44,6 @@
             padding: 3px 5px;
             border-radius: 5px;
             background-color: #E6E8DE;
-
-            span {
-                color: #30716F;
-            }
         }
 
         li:not(:first-child) {
@@ -69,4 +75,6 @@
         margin-top: 20px;
         text-align: left;
     }
+
+
 }
