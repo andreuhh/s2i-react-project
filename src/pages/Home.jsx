@@ -54,7 +54,7 @@ export default function Home() {
             {data?.results && data?.results?.length > 0 && <MainResults mainResults={data?.results} />}
             {data?.results && data?.results?.length === 0 && <div>Nessun risultato per questa ricerca</div>}
 
-            { /* SEARCH BY DAILY CALORIES */}
+            <h2>Search by daily calories</h2>
             <input type="number" placeholder="Search by Calories (e.g 2000)" onChange={handleChange} />
             <button onClick={getMealData}>Search</button>
             {mealData && <MealList mealData={mealData} />}

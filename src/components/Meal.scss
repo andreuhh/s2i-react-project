@@ -3,7 +3,6 @@ article {
     flex-direction: column;
     margin: 0 1rem;
     max-width: 300px;
-    //box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
     width: 300px;
     border-radius: 20px;
     text-align: left;
@@ -29,5 +28,9 @@ article {
 
     span {
         padding-right: 5px;
+    }
+
+    @media only screen and (max-width: 1300px) {
+        margin-top: 15px;
     }
 }

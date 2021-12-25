@@ -10,6 +10,7 @@ export default function SearchForm({ searchText }) {
 
     return (
         <div>
+            <h2>Search by name</h2>
             <form onSubmit={handleSubmit}>
                 <input placeholder="Search by name" onChange={(e) => setText(e.target.value)} />
                 <button

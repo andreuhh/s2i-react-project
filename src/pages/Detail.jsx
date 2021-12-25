@@ -1,7 +1,7 @@
 import { useParams } from 'react-router'
 import Navbar from '../components/Navbar/Navbar'
 import { useFetch } from '../hooks/useFetch'
-import { FaClock, FaUtensils, FaLeaf, FaSeedling, FaHeart } from 'react-icons/fa'
+import { FaClock, FaUtensils, FaLeaf, FaSeedling, FaHeart, FaDollarSign } from 'react-icons/fa'
 
 import './Detail.scss'
 
@@ -23,13 +23,18 @@ export default function Detail() {
                 <div className="detail__hero" style={{ height: 450, backgroundImage: `url(${recipe?.image})`, borderRadius: 20 }}></div>
 
                 <h1>{recipe?.title}</h1>
+
                 <ul className="detail__info">
                     <li><span><FaClock /></span> Preparation: {recipe.readyInMinutes} min</li>
                     <li><span><FaUtensils /></span>Servings: {recipe.servings}</li>
                     {recipe.vegetarian && <li><span><FaLeaf /></span>Vegetarian</li>}
                     {recipe.vegan && <li><span><FaSeedling /></span>Vegan</li>}
                     {recipe.veryPopular && <li><span><FaHeart /></span>Very Popular</li>}
+                    {recipe.pricePerServing && <li><span><FaDollarSign /></span>{recipe.pricePerServing / 100}</li>}
                 </ul>
+
+                <h3>Summary</h3>
+                <p dangerouslySetInnerHTML={{ __html: recipe.summary }}></p>
 
                 {recipe.analyzedInstructions && <div>
                     <h3>Instructions</h3>

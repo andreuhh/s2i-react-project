@@ -5,12 +5,24 @@
         background-repeat: no-repeat;
         background-size: cover;
         margin: 0 auto;
+
+        @media only screen and (max-width: 1024px) {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            height: 350px !important;
+        }
     }
 
     p,
     ol,
     ul {
         text-align: left;
+    }
+
+    p {
+        margin-bottom: 20px;
     }
 
     &__info {
@@ -34,6 +46,18 @@
 
         svg {
             margin-right: 5px;
+        }
+
+        @media only screen and (max-width: 700px) {
+            display: block;
+
+            li {
+                width: fit-content;
+            }
+
+            li:not(:first-child) {
+                margin-left: 0px;
+            }
         }
     }
 

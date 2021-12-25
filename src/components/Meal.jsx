@@ -27,7 +27,7 @@ export default function Meal({ meal }) {
             <Link to={`/detail/${meal.id}`}>
                 <div className="cover" style={{ height: 280, backgroundImage: `url(${imageUrl})`, borderRadius: 20 }}></div>
                 <div className="info">
-                    <h1>{meal.title}</h1>
+                    <h1 className='textOneLine'>{meal.title}</h1>
 
                     <ul>
                         <li><span><FaClock /></span> Preparation: {meal.readyInMinutes} min</li>
