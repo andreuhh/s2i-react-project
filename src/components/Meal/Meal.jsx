@@ -10,7 +10,7 @@ export default function Meal({ meal }) {
     // key2 = c08540dcb8804eb08e35916054acf82e
 
     useEffect(() => {
-        fetch(`https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=acaba579520543978d3f9d612722d9a6&includeNutrition=false`
+        fetch(`https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=c08540dcb8804eb08e35916054acf82e&includeNutrition=false`
         )
             .then((response) => response.json())
             .then((data) => {
