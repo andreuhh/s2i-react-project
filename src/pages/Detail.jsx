@@ -1,5 +1,6 @@
 import { useParams } from 'react-router'
 import Navbar from '../components/Navbar/Navbar'
+import SimilarMeal from '../components/SimilarMeal/SimilarMeal'
 import { useFetch } from '../hooks/useFetch'
 import { FaClock, FaUtensils, FaLeaf, FaSeedling, FaHeart, FaDollarSign } from 'react-icons/fa'
 
@@ -48,6 +49,8 @@ export default function Detail() {
 
                 </div>}
 
+
+                <SimilarMeal id={recipe.id} />
             </div>
             }
         </div>

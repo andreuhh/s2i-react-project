@@ -10,8 +10,6 @@ import Navbar from '../components/Navbar/Navbar';
 export default function Home() {
     const [mealData, setMealData] = useState(null);
     const [calories, setCalories] = useState(2000);
-
-    const [searchData, setSearchData] = useState(null);
     const [term, setTerm] = useState('meal');
 
     function handleChange(e) {
@@ -31,10 +29,6 @@ export default function Home() {
                 console.log('error');
             })
     }
-
-    // function handleSearch(e) {
-    //     setTerm(e.target.value)
-    // }
 
     // key1 = acaba579520543978d3f9d612722d9a6
     // key2 = c08540dcb8804eb08e35916054acf82e

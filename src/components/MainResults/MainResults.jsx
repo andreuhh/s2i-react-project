@@ -1,8 +1,6 @@
 import React from 'react'
 import Meal from '../Meal/Meal'
 
-import './MainResults.scss'
-
 export default function MainResults({ mainResults }) {
 
     return (
