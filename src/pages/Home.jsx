@@ -19,7 +19,7 @@ export default function Home() {
 
     function getMealData() {
         fetch(
-            `https://api.spoonacular.com/mealplanner/generate?apiKey=c08540dcb8804eb08e35916054acf82e&timeFrame=day&diet=vegetarian&targetCalories=${calories}`
+            `https://api.spoonacular.com/mealplanner/generate?apiKey=acaba579520543978d3f9d612722d9a6&timeFrame=day&diet=vegetarian&targetCalories=${calories}`
         )
             .then((response) => response.json())
             .then((data) => {
@@ -31,7 +31,7 @@ export default function Home() {
             })
     }
 
-    const { data, isPending, error } = useFetch(`https://api.spoonacular.com/recipes/search?apiKey=c08540dcb8804eb08e35916054acf82e&number=8&diet=vegetarian&query=${term}`)
+    const { data, isPending, error } = useFetch(`https://api.spoonacular.com/recipes/search?apiKey=acaba579520543978d3f9d612722d9a6&number=8&diet=vegetarian&query=${term}`)
 
     return (
         <div className="App">
