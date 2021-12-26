@@ -6,16 +6,12 @@ import './Meal.scss'
 export default function Meal({ meal }) {
     const [imageUrl, setImageUrl] = useState("")
 
-    // key1 = acaba579520543978d3f9d612722d9a6
-    // key2 = c08540dcb8804eb08e35916054acf82e
-
     useEffect(() => {
         fetch(`https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=c08540dcb8804eb08e35916054acf82e&includeNutrition=false`
         )
             .then((response) => response.json())
             .then((data) => {
                 setImageUrl(data.image);
-                console.log('image', data);
             })
             .catch(() => {
                 console.log("error");

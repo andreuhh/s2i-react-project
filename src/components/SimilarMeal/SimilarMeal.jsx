@@ -3,9 +3,8 @@ import Meal from '../Meal/Meal';
 
 export default function SimilarMeal({ id }) {
 
-    const url = `https://api.spoonacular.com/recipes/${id}/similar?apiKey=acaba579520543978d3f9d612722d9a6`
+    const url = `https://api.spoonacular.com/recipes/${id}/similar?apiKey=c08540dcb8804eb08e35916054acf82e`
     const { data: recipe, isPending, error } = useFetch(url)
-    console.log('similar', recipe);
 
     return (
         <>

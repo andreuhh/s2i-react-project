@@ -4,8 +4,9 @@ import MealList from '../components/MealList/MealList';
 import MainResults from '../components/MainResults/MainResults';
 import Banner from '../components/Banner/Banner';
 import SearchForm from '../components/SearchForm/SearchForm';
-import './Home.scss'
 import Navbar from '../components/Navbar/Navbar';
+import Loader from '../components/Loader/Loader';
+import './Home.scss'
 
 export default function Home() {
     const [mealData, setMealData] = useState(null);
@@ -30,10 +31,7 @@ export default function Home() {
             })
     }
 
-    // key1 = acaba579520543978d3f9d612722d9a6
-    // key2 = c08540dcb8804eb08e35916054acf82e
-
-    const { data, isPending, error } = useFetch(`https://api.spoonacular.com/recipes/search?apiKey=c08540dcb8804eb08e35916054acf82e&number=4&diet=vegetarian&query=${term}`)
+    const { data, isPending, error } = useFetch(`https://api.spoonacular.com/recipes/search?apiKey=c08540dcb8804eb08e35916054acf82e&number=8&diet=vegetarian&query=${term}`)
 
     return (
         <div className="App">
@@ -42,7 +40,7 @@ export default function Home() {
             <SearchForm searchText={(text) => setTerm(text)} />
 
             {error && <p className="error">{error}</p>}
-            {isPending && <p className="loading">Loading...</p>}
+            {isPending && <Loader />}
 
             {data?.results && data?.results?.length > 0 && <MainResults mainResults={data?.results} />}
             {data?.results && data?.results?.length === 0 && <div>Nessun risultato per questa ricerca</div>}

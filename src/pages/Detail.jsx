@@ -1,23 +1,22 @@
 import { useParams } from 'react-router'
 import Navbar from '../components/Navbar/Navbar'
 import SimilarMeal from '../components/SimilarMeal/SimilarMeal'
+import Loader from '../components/Loader/Loader'
+import './Detail.scss'
 import { useFetch } from '../hooks/useFetch'
 import { FaClock, FaUtensils, FaLeaf, FaSeedling, FaHeart, FaDollarSign } from 'react-icons/fa'
-
-import './Detail.scss'
 
 export default function Detail() {
 
     const { id } = useParams()
     const url = `https://api.spoonacular.com/recipes/${id}/information?apiKey=acaba579520543978d3f9d612722d9a6&includeNutrition=false`
     const { data: recipe, isPending, error } = useFetch(url)
-    console.log('single recipe', recipe);
 
     return (
         <div className="App detail">
             <Navbar />
             {error && <p className="error">{error}</p>}
-            {isPending && <p className="loading">Loading...</p>}
+            {isPending && <Loader />}
 
             {recipe && <div>
 
